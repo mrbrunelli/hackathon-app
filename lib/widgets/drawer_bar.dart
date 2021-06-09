@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/functions.dart';
+import 'package:hackathon_app/widgets/picture.dart';
 
 class DrawerBar {
-  static Widget create(BuildContext context, String title, List<Map> itensList, {IconData titleIcon}){
+  static Widget create(BuildContext context,Color bgColor, Color txtColor, List<Map> itensList, {String path, double w, double h}){
     return Drawer(
-      child: ListView(
-        children: [
-          _createBarTitle(title, titleIcon),
-          _createListItens(context, itensList),
-        ],
-      ),
+      child: Container(
+        color: bgColor,
+        child: ListView(
+          children: [
+            _createBarTitle( bgColor, txtColor, path, w, h),
+            _createListItens(context, itensList),
+          ],
+        ),
+      )
     );
   }
 
-  static Widget _createBarTitle(String title, IconData titleIcon) {
+  static Widget _createBarTitle(Color bgColor, Color txtColor, String path, double w, double h) {
     return DrawerHeader(
+        decoration: BoxDecoration(
+          color: bgColor,
+        ),
       child: Column(
         children: [
-          Text(title, style: TextStyle(fontSize: 30),),
-          Functions.createIcons(titleIcon, size:60),
+          Picture.create(path, h: h, w: w),
         ],
       ),
     );
@@ -27,16 +32,15 @@ class DrawerBar {
   static Widget _createListItens(BuildContext context, List<Map> itensList) {
     var list = List<Widget>();
     for (var item in itensList) {
-      list.add(_criarItem(context, item["text"], item["icon"], item["event"]));
+      list.add(_criarItem(context, item["text"],  item["event"]));
     }
     return Column(children: list,);
   }
 
-  static Widget _criarItem(BuildContext context, String text, IconData icon, Function event){
+  static Widget _criarItem(BuildContext context, String text, Function event){
     return ListTile(
         title: Row(
           children: [
-            Functions.createIcons(icon, size: 20),
             Text(text, style: TextStyle(fontSize: 20)),
           ],
         ),

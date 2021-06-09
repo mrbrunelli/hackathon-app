@@ -10,14 +10,17 @@ void main() {
     title: 'Company Name',
     theme: ThemeData(
       brightness: Brightness.light,
-      primaryColor: Color(0xFF2f3542),
+      primaryColor: Color(0xFF57606f),
       accentColor: Color(0xFF25CCF7),
       // fontFamily: 'Verdana',
 
       textTheme: TextTheme(
-        headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-        bodyText1: TextStyle(fontSize: 23),
+        headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.pinkAccent,),
+        bodyText1: TextStyle(fontSize: 23, color: Color(0xFF25CCF7)),
+        headline6: TextStyle(color: Colors.green),
       ),
+
+
     ),
     home: HomePage(),
     debugShowCheckedModeBanner: false,
