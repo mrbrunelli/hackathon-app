@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:hackathon_app/widgets/picture.dart';
 
 class DrawerBar {
-  static Widget create(BuildContext context,Color bgColor, Color txtColor, List<Map> itensList, {String path, double w, double h}){
+  static Widget create(BuildContext context,Color bgColor, List<Map> itensList, {String path, double w, double h}){
     return Drawer(
       child: Container(
         color: bgColor,
         child: ListView(
           children: [
-            _createBarTitle( bgColor, txtColor, path, w, h),
+            _createBarTitle( bgColor, path, w, h),
             _createListItens(context, itensList),
           ],
         ),
@@ -16,7 +16,7 @@ class DrawerBar {
     );
   }
 
-  static Widget _createBarTitle(Color bgColor, Color txtColor, String path, double w, double h) {
+  static Widget _createBarTitle(Color bgColor, String path, double w, double h) {
     return DrawerHeader(
         decoration: BoxDecoration(
           color: bgColor,
