@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackathon_app/ui/about_page.dart';
 import 'package:hackathon_app/widgets/drawer_bar.dart';
 import 'package:hackathon_app/widgets/title_bar.dart';
 
@@ -19,11 +20,12 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
-      appBar: TitleBar.create("Carros Novos e Usados"),
+      appBar: TitleBar.create("Carros Novos e Usados", color: Theme.of(context).accentColor),
       drawer: DrawerBar.create(
-        context,Color(0xFF57606f), Color (0xFF25CCF7), itensList, path: "images/logo-transparent.png", h: 137,
+        context, Theme.of(context).primaryColor, itensList, path: "images/logo-transparent.png", h: 137,
       ),
       body: Container(
+
 
       ),
     );
@@ -31,6 +33,10 @@ class _HomePageState extends State<HomePage> {
 
   void _listNewer(){}
   void _listUsed(){}
-  void _about(){}
+  void _about(){
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => AboutPage()
+    ));
+  }
 }
 
