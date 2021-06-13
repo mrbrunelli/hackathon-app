@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/ui/about_page.dart';
+import 'package:hackathon_app/ui/new_page.dart';
 import 'package:hackathon_app/widgets/data_list.dart';
 import 'package:hackathon_app/widgets/drawer_bar.dart';
 import 'package:hackathon_app/widgets/picture.dart';
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
-      appBar: TitleBar.create("Carros Novos e Usados", icon: Icons.directions_car_outlined, color: Theme.of(context).accentColor),
+      appBar: TitleBar.create("JacCar", icon: Icons.directions_car_outlined, color: Theme.of(context).accentColor),
       drawer: DrawerBar.create(
         context, Theme.of(context).primaryColor, itensList, path: "images/logo-transparent.png", h: 137,
       ),
@@ -67,8 +68,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void _listNew(){}
-  void _listUsed(){}
+  void _listNew(){
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => NewPage()
+    ));
+  }
+  void _listUsed(){
+
+  }
   void _about(){
     Navigator.push(context, MaterialPageRoute(
         builder: (context) => AboutPage()
