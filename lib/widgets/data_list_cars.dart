@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/functions.dart';
 import 'package:hackathon_app/ui/car_page.dart';
-import 'package:intl/intl.dart';
+
 import 'package:hackathon_app/widgets/picture.dart';
 
 
@@ -12,7 +12,6 @@ class DataListCars {
   }
 
   static Widget createItem(Map datas) {
-    Intl.defaultLocale = 'pt_BR';
     return Row(
       children: <Widget>[
         Flexible(child:
@@ -27,7 +26,7 @@ class DataListCars {
               Text(datas["brand"].toString() + " - " + datas["model"].toString(), style: TextStyle(fontSize: 18)),
               Text(datas["yearmodel"].toString() + "/"+ datas["yearmanufacture"].toString() + " " + datas["color"].toString(), style: TextStyle(fontSize: 14, color: Color(0xFF57606f))),
               Text(
-                _getCurrency(datas["price"]), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                Functions.getCurrency(datas["price"]), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -35,10 +34,4 @@ class DataListCars {
       ],
     );
   }
-  static String _getCurrency(value) {
-    NumberFormat.simpleCurrency(locale: 'pt_BR');
-    NumberFormat formatter = NumberFormat.simpleCurrency();
-    return formatter.format(value);
-  }
-  
 }

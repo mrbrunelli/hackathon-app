@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 class Functions {
 
@@ -28,4 +29,12 @@ class Functions {
       child: Icon(icon, color: color, size: size),
     );
   }
+
+  static String getCurrency(value) {
+    NumberFormat.simpleCurrency(locale: 'pt_BR');
+    NumberFormat formatter = NumberFormat.simpleCurrency();
+    return formatter.format(value);
+  }
+
+
 }

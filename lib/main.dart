@@ -16,10 +16,12 @@ void main() {
       fontFamily: 'Ubuntu',
       textTheme: TextTheme(
         bodyText1: TextStyle(fontSize: 16, color: Color(0xFFf1f2f6)),
+
         bodyText2: TextStyle(fontSize: 18, color: Color(0xFF2f3542)),
         subtitle1: TextStyle(fontSize: 18, color: Color(0xFF2f3542), fontWeight: FontWeight.bold),
-
+        subtitle2: TextStyle(fontSize: 18, color: Color(0xFF57606f)),
         headline4: TextStyle(fontSize: 18, color: Color(0xFF2f3542), fontWeight: FontWeight.bold),
+
         headline1: TextStyle(fontSize: 28, color: Color(0xFF2f3542), fontWeight: FontWeight.bold),
       ),
     ),
