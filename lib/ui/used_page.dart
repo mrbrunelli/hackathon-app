@@ -14,7 +14,7 @@ class _UsedPageState extends State<UsedPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: TitleBar.create("Carros Usados", icon: Icons.directions_car_outlined, color: Theme.of(context).accentColor),
+      appBar: TitleBar.create("Carros Usados",color: Theme.of(context).accentColor),
       body: Column(
         children: <Widget>[
           Expanded(
