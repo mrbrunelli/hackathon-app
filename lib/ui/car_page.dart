@@ -24,7 +24,7 @@ class CarPage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Picture.create(
+                      Picture.createLink(
                           Functions.imgLink(detailsCar["photo"].toString())
                       ),
                     ],

@@ -19,7 +19,7 @@ class DataListCars {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
                //Picture.create("images/ka bco.jpg", w: 200),
-              Picture.create(Functions.imgLink(datas["photo"].toString()), w: 300),
+              Picture.createLink(Functions.imgLink(datas["photo"].toString()), w: 300),
               Text(
                 datas["brand"].toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),

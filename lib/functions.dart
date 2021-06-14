@@ -31,8 +31,7 @@ class Functions {
   }
 
   static String getCurrency(value) {
-    NumberFormat.simpleCurrency(locale: 'pt_BR');
-    NumberFormat formatter = NumberFormat.simpleCurrency();
+    NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
     return formatter.format(value);
   }
 
