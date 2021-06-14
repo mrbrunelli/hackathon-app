@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/ui/about_page.dart';
 import 'package:hackathon_app/ui/new_page.dart';
+import 'package:hackathon_app/ui/used_page.dart';
 import 'package:hackathon_app/widgets/data_list.dart';
 import 'package:hackathon_app/widgets/drawer_bar.dart';
 import 'package:hackathon_app/widgets/picture.dart';
@@ -74,7 +75,9 @@ class _HomePageState extends State<HomePage> {
     ));
   }
   void _listUsed(){
-
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => UsedPage()
+    ));
   }
   void _about(){
     Navigator.push(context, MaterialPageRoute(
