@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/functions.dart';
 import 'package:hackathon_app/ui/car_page.dart';
-
 import 'package:hackathon_app/widgets/picture.dart';
-
 
 class DataListCars {
 
@@ -18,8 +16,19 @@ class DataListCars {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-               //Picture.create("images/ka bco.jpg", w: 200),
-              Picture.createLink(Functions.imgLink(datas["photo"].toString()), w: 300),
+              Container(
+                margin: const EdgeInsets.fromLTRB(0, 3, 0, 0),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Color(0xFF2f3542))
+                ),
+                child: Column(
+                  children: [
+                    Picture.createLink(
+                        Functions.imgLink(datas["photo"].toString())
+                    ),
+                  ],
+                ),
+              ),
               Text(
                 datas["brand"].toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),

@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
-      appBar: TitleBar.create("JacCar", icon: Icons.directions_car_outlined, color: Theme.of(context).accentColor),
+      appBar: TitleBar.create("JacCar", color: Theme.of(context).accentColor),
       drawer: DrawerBar.create(
         context, Theme.of(context).primaryColor, itensList, path: "images/logo-transparent.png", h: 137,
       ),

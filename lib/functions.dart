@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
@@ -17,17 +16,6 @@ class Functions {
 
   static String imgLink(String link){
     return link.replaceAll("~/", "http://172.29.16.1:8085/");
-  }
-
-  static Widget createIcons(IconData icon, {Color color, double size}){
-    return icon != null ? _spaceIcon(icon, color, size) : Container();
-  }
-
-  static Widget _spaceIcon(IconData icon, Color color, double size){
-    return Padding(
-      padding: EdgeInsets.fromLTRB(0, 0, 15, 0),
-      child: Icon(icon, color: color, size: size),
-    );
   }
 
   static String getCurrency(value) {

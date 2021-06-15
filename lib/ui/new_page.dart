@@ -14,7 +14,7 @@ class _NewPageState extends State<NewPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: TitleBar.create("Carros Novos", icon: Icons.directions_car_outlined, color: Theme.of(context).accentColor),
+      appBar: TitleBar.create("Carros Novos", color: Theme.of(context).accentColor),
       body: Column(
         children: <Widget>[
           Expanded(

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../functions.dart';
-
 class TitleBar {
-  static Widget create(String title, {IconData icon, centerTitle = true, Color color}){
+  static Widget create(String title, { centerTitle = true, Color color}){
     return AppBar(
       title: Container(
-        child: Row(
+        child: Column(
           children: [
-            Functions.createIcons(icon),
             Text(title),
           ],
         ),

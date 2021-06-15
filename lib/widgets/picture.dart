@@ -19,4 +19,20 @@ class Picture {
         height: h,
     );
   }
+
+  static Widget circleImage(String path) {
+    return Center(
+      child : new Container(
+        width: 95.0,
+        height: 95.0,
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage(path)
+            )
+        ),
+      ),
+    );
+  }
 }

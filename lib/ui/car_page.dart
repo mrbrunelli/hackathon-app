@@ -22,15 +22,22 @@ class CarPage extends StatelessWidget {
                       Text(detailsCar["model"].toString(), style: Theme.of(context).textTheme.headline1),
                     ],
                   ),
-                  Column(
-                    children: [
-                      Picture.createLink(
-                          Functions.imgLink(detailsCar["photo"].toString())
-                      ),
-                    ],
+                  Container(
+                    margin: const EdgeInsets.fromLTRB(0, 10.0, 0, 0),
+                    padding: const EdgeInsets.all(2.0),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Theme.of(context).primaryColor)
+                    ),
+                    child: Column(
+                      children: [
+                        Picture.createLink(
+                            Functions.imgLink(detailsCar["photo"].toString())
+                        ),
+                      ],
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
+                    padding: EdgeInsets.fromLTRB(0, 10, 0, 15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
