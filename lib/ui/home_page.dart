@@ -58,8 +58,11 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       );
-                    else
-                       return DataList.create(context, snapshot, Functions.ALL_LIST);
+                    else{
+
+                      return DataList.create(context, snapshot, Functions.ALL_LIST);
+                    }
+
                 }
               },
             ),

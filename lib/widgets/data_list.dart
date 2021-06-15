@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:hackathon_app/functions.dart';
 import 'package:hackathon_app/widgets/data_list_cars.dart';
 
-
 class DataList {
+
   static Widget create(BuildContext context, AsyncSnapshot snapshot, int type) {
-    //snapshot contem os dados retornados
+    int size = snapshot.data.length;
+    if (type == Functions.ALL_LIST && size > 3) size = 3;
+    //List sortedData = snapshot.data;
+    //sortedData.sort((a, b) => a.someProperty.compareTo(b.someProperty));
+
     return ListView.builder(
       padding: EdgeInsets.all(6),
       scrollDirection: Axis.vertical,
-      itemCount: snapshot.data.length,
+      itemCount: size,
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
